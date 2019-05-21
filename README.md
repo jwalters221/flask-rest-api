@@ -28,8 +28,7 @@ $ pipenv install (to install pip packages)
 $ pipenv run migrate (to create the database)
 $ pipenv run start (to start the flask webserver)
 ```
-ASSIGNMENT
-Sample E-Commerce Site
+## ASSIGNMENT Sample E-Commerce Site
 
 1. Add 3 fields to Person Model:
     -first_name
