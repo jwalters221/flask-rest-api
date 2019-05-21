@@ -53,9 +53,9 @@ Sample E-Commerce Site
     -description
 8. Populate your Products table with at least 3 products
 9. Build new API endpoints:
-    -/cart POST=create new cart and add item to cart through 1 request
-    -/cart/[cart_id] GET=get cart contents from cart id (include product descriptions)
-    -/cart/[cart_id]/[cart_item_id] PUT=update cart contents of 1 line item
+    -/cart POST=create new cart and add item to cart through 1 request<br>
+    -/cart/[cart_id] GET=get cart contents from cart id (include product descriptions)<br>
+    -/cart/[cart_id]/[cart_item_id] PUT=update cart contents of 1 line item<br>
     -/cart/[cart_id]/ DELETE=delete cart based on cart ID
 
     **Bonus** IMPLEMENT ANY OTHER API ENDPOINTS THAT MAY BE USEFUL?
