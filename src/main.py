@@ -10,7 +10,7 @@ from flask_jwt_simple import (
     JWTManager, jwt_required, create_jwt, get_jwt_identity
 )
 from utils import APIException, generate_sitemap
-from models import db, Person
+from models import db, Person, User
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB_CONNECTION_STRING')
@@ -40,8 +40,12 @@ def login():
     if not password:
         return jsonify({"msg": "Missing password parameter"}), 400
 
-    if username != 'test' or password != 'test':
+    usercheck = User.query.filter_by(username=username, password=password).first()
+    if usercheck == None:
         return jsonify({"msg": "Bad username or password"}), 401
+
+    #if username != 'test' or password != 'test':
+    #    return jsonify({"msg": "Bad username or password"}), 401
 
     # Identity can be any data that is json serializable
     ret = {'jwt': create_jwt(identity=username)}
