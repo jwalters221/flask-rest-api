@@ -19,7 +19,7 @@ MIGRATE = Migrate(app, db)
 db.init_app(app)
 CORS(app)
 
-# Setup the Flask-JWT-Simple extension
+# Setup the Flask-JWT-Simple extension for example
 app.config['JWT_SECRET_KEY'] = 'super-secret'  # Change this!
 jwt = JWTManager(app)
 
